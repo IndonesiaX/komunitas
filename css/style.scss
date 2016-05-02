@@ -623,6 +623,24 @@ header.navigation {
   }
 }
 
+.about {
+  text-align: left;
+  padding: 60px 0 20px;
+  background: lighten($brand-deep-blue, 60%);
+  li {
+    margin-bottom: 40px;
+
+    @include media($tablet) {
+      @include span-columns(6);
+      padding: 0 5%;
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+
+  }
+}
+
 //Landing How to Join
 .landing-howto {
   text-align: center;
