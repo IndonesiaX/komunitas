@@ -1019,6 +1019,26 @@ header.navigation {
   }
 }
 
+.participate-page {
+  text-align: center;
+  background: lighten($brand-deep-blue, 60%);
+  .hero-text {
+    font-size: 30px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 80px;
+    @include media($tablet) {
+      max-width: 60%;
+    }
+  }
+
+  .contribute {
+    .section-title {
+      font-size: em(28px);
+    }
+  }
+}
+
 //Footer
 .footer {
   $base-spacing: 1.5em !default;
