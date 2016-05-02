@@ -578,6 +578,51 @@ header.navigation {
 
 }
 
+//Contribute
+.contribute {
+  padding: 60px 20px 20px 20px;
+
+  @include media($tablet) {
+    .container {
+      max-width: 65%;
+    }
+  }
+  
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  .contribute-item {
+    text-align: center;
+    margin-bottom: 30px;
+    
+    @include media($tablet) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+
+    a {
+      color: $dark-gray;
+      &:hover {
+        color: darken($dark-gray, 20%);
+      }
+    }
+
+    img {
+      max-width: 190px;
+      height: auto;
+      padding: 0 20px;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-size: em(18px);
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+  }
+}
+
 //Landing How to Join
 .landing-howto {
   text-align: center;
