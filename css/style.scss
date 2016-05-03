@@ -50,9 +50,6 @@ header.navigation {
     padding-left: 15px;
     padding-top: 5px;
     padding-right: $navigation-padding;
-    background: url('../img/tabs-half.png') no-repeat;
-    background-size: contain;
-    background-position-x: -18px;
     width: 195px;
     position: relative;
     top: 6px;
@@ -70,7 +67,7 @@ header.navigation {
     float: right;
     line-height: $navigation-height;
     margin: 0;
-    padding-right: 1em;
+    font-size: 23px;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -1023,14 +1020,20 @@ header.navigation {
 
 .participate-page {
   text-align: center;
+  
+
 
   .hero-text {
-    font-size: 30px;
+    font-size: em(20px);
     max-width: 90%;
     margin: 0 auto;
     padding-top: 80px;
     @include media($tablet) {
       max-width: 60%;
+      font-size: em(26px);
+    }
+    @include media($desktop) {
+      font-size: em(30px);
     }
   }
 
@@ -1049,7 +1052,13 @@ header.navigation {
         padding: 0 10px 10px;
       }
     }
+    @include media($desktop) {
+      .container {
+        max-width: 75%;
+      }
+    }
   }
+
   .newsletter-signup {
     background: lighten($brand-deep-blue, 60%);
   }
