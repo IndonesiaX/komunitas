@@ -390,46 +390,49 @@ header.navigation {
   .hero-inner {
     @include outer-container($refills-max-width);
     @include clearfix;
-    background: transparent;
-    margin: auto;
-    padding-left: 6%;
-    text-align: left;
+    background: transparentize(mix($brand-deep-blue, $brand-deep-green), 0.4);
+    //background: rgba(0, 0, 0, 0.5);
+    margin: 0;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     height: 100%;
 
     .hero-copy {
-      text-align: left;
+      width: 100%;
+      text-align: center;
       position: absolute;
-      bottom: em(65px);
+      top: 40%;
+
+      @include media($tablet) {
+        top: 33%;
+      }
 
       h1 {
-        display: inline-block;
-        color: $dark-gray;
-        background: rgba($white, 0.9);
+        display: block;
+        color: $white;
         padding: 3px 12px;
-        font-size: 1.6em;
+        font-size: em(50px);
+        font-weight: 300;
         margin-bottom: 0.5em;
-        max-width: 75%;
 
         @include media($tablet) {
-          font-size: 1.8em;
+          font-size: em(65px);
+          margin-bottom: 5px;
         }
       }
 
       p {
-        color: $dark-gray;
-        background: rgba($white, 0.9);
+        color: $white;
         padding: 3px 12px;
         line-height: 1.4em;
         margin: 0;
-        max-width: 95%;
+        font-size: em(21px);
 
         @include media($tablet) {
-          font-size: 1.1em;
-          max-width: 60%;
+          font-size: em(21px);
         }
       }
     }
