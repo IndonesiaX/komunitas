@@ -1035,8 +1035,19 @@ header.navigation {
   }
 
   .contribute {
+    .container {
+      max-width: 75%;
+    }
     .section-title {
       font-size: em(28px);
+    }
+    @include media($tablet) {
+      .container {
+        max-width: 95%;
+      }
+      .contribute-item {
+        padding: 0 10px 10px;
+      }
     }
   }
   .newsletter-signup {
