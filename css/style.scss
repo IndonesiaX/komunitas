@@ -581,6 +581,7 @@ header.navigation {
 //Contribute
 .contribute {
   padding: 60px 20px 20px 20px;
+  background: lighten($brand-deep-blue, 65%);
 
   @include media($tablet) {
     .container {
@@ -617,7 +618,7 @@ header.navigation {
       text-transform: uppercase;
       font-size: em(18px);
       font-weight: 600;
-      margin-top: 5px;
+      margin-top: 5px;      
     }
 
   }
@@ -942,7 +943,7 @@ header.navigation {
 
 //Newsletter Signup
 .newsletter-signup {
-  background: #fff;
+  background: lighten($brand-deep-blue, 60%);
   text-align: center;
 
   h3 {
@@ -1021,7 +1022,7 @@ header.navigation {
 
 .participate-page {
   text-align: center;
-  background: lighten($brand-deep-blue, 60%);
+
   .hero-text {
     font-size: 30px;
     max-width: 90%;
@@ -1036,6 +1037,9 @@ header.navigation {
     .section-title {
       font-size: em(28px);
     }
+  }
+  .newsletter-signup {
+    background: lighten($brand-deep-blue, 60%);
   }
 }
 
