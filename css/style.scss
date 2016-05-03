@@ -520,30 +520,30 @@ header.navigation {
         font-weight: normal;
 
         &::before {
+          content: '';
           position: absolute;
-          top: 0;
+          top: 2px;
           left: 0;
           width: 52px;
-          height: 42px;
-          color: darken($community-color, 10%);
-          font-family: 'FontAwesome';
+          height: 49px;
         }
       }
       .stat.contributors {
         &::before {
-          height: 49px;
-          content: '\f0c0';
+          background: url('../img/team.png') no-repeat;
+          background-size: contain;
         }
       }
-      .stat.organizations {
+      .stat.events {
         &::before {
-          content: '\f004';
+          background: url('../img/mortarboard.png') no-repeat;
+          background-size: contain;
         }
       }
-      .stat.countries {
+      .stat.languages {
         &::before {
-          content: '\f0ac';
-          left: 10px;
+          background: url('../img/planet-earth.png') no-repeat;
+          background-size: contain;
         }
       }
     }
