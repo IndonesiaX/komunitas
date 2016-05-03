@@ -1160,7 +1160,7 @@ header.navigation {
   $footer-disclaimer-color: transparentize($footer-color, 0.2);
 
   background: $footer-background;
-  padding: 20px;
+  padding: 40px 20px;
   width: 100%;
   text-align: left;
 
@@ -1173,21 +1173,25 @@ header.navigation {
   .cols {
     text-align: left;
     margin-bottom: 30px;
-
+  }
+  .cols.short-about {
     @include media($tablet) {
-      @include span-columns(4);
+      @include span-columns(6);
     }
   }
   .cols.links {
-    text-align: center;
+    @include media($tablet) {
+      @include span-columns(3);
+    }
+  }
+  .cols.other {
+    @include media($tablet) {
+      @include span-columns(3);
+    }
   }
 
   .social-lists {
-    text-align: center;
-
-    @include media ($tablet) {
-      text-align: left;
-    }
+    width: 100%;
 
     li {
       display: inline-block;
@@ -1231,9 +1235,10 @@ header.navigation {
     }
   }
 
-  li h3 {
+  h6 {
     color: $footer-color;
     font-size: 1em;
+    font-weight: 600;
     margin-bottom: 0.4em;
   }
 
@@ -1247,13 +1252,15 @@ header.navigation {
     color: $white;
     font-size: 0.9em;
     line-height: 1.5em;
-    margin: auto;
-    max-width: 35em;
+    margin: 0;
   }
 
   .copy {
-    text-align: center;
+    @include media($tablet) {
+      text-align: center;
+    }
   }
+
 }
 
 //Page about
