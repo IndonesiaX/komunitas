@@ -88,15 +88,19 @@
         </div>
 
 
+        <!-- Subscribe -->
         <section class="section newsletter-signup">
             <div class="container">
-                <form action="" class="newsletter-form">
+                <form action="subscribe.php" method="POST" accept-charset="utf-8" class="newsletter-form">
                     <div class="form-title">
                         <h3 class="section-title">Mulai Bergabung</h3>
                     </div>
                     <div class="form-contents">
+                        <div class="field field-name ">
+                            <input id="id_name" name="name" placeholder="NAMA" required="required" type="text">
+                        </div>
                         <div class="field field-email ">
-                            <input id="id_email" name="email" placeholder="YOUR EMAIL HERE" required="required" type="email">
+                            <input id="id_email" name="email" placeholder="EMAIL" required="required" type="email">
                         </div>
                     </div>
                     <div class="form-submit">
