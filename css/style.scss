@@ -625,7 +625,7 @@ header.navigation {
   text-align: left;
   padding: 60px 0 20px;
   background: lighten($brand-deep-blue, 60%);
-  li {
+  .cols {
     margin-bottom: 40px;
 
     @include media($tablet) {
@@ -635,7 +635,10 @@ header.navigation {
     h2 {
       text-transform: uppercase;
     }
-
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
   }
 }
 
@@ -1145,30 +1148,60 @@ header.navigation {
   $action-color: #477DCA !default;
   $medium-screen: 40em !default;
   $large-screen: 53.75em !default;
-  $footer-background: darken($brand-deep-green, 10%);
+  $footer-background: mix($brand-deep-blue, $brand-deep-green);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
-  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.2);
 
   background: $footer-background;
-  padding: ($base-spacing * 2) $gutter;
+  padding: 20px;
   width: 100%;
+  text-align: left;
 
   .footer-logo {
-    margin-bottom: 2em;
+    max-width: 130px;
+    text-align: center;
+    margin: 0 auto 10px;
+  }
+
+  .cols {
+    text-align: left;
+    margin-bottom: 30px;
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+  }
+  .cols.links {
+    text-align: center;
+  }
+
+  .social-lists {
     text-align: center;
 
-    img {
-      height: 3em;
+    @include media ($tablet) {
+      text-align: left;
+    }
+    
+    li {
+      display: inline-block;
+      
+      >a {
+        font-size: em(22px);
+        margin-right: 7px;
+      }
     }
   }
 
-  .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: $base-spacing;
+  .language-box {
+    text-align: center;
+    width: 100%;
+
+    @include media($tablet) {
+      width: 50%;
+    }
   }
+
 
   ul {
     flex-basis: 13em;
@@ -1180,7 +1213,6 @@ header.navigation {
   li {
     line-height: 1.5em;
     list-style: none;
-    text-align: center;
   }
 
   li a {
@@ -1206,11 +1238,14 @@ header.navigation {
   }
 
   p {
-    color: $footer-disclaimer-color;
+    color: $white;
     font-size: 0.9em;
     line-height: 1.5em;
     margin: auto;
     max-width: 35em;
+  }
+
+  .copy {
     text-align: center;
   }
 }
