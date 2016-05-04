@@ -1347,6 +1347,10 @@ header.navigation {
 .email-address {
   font-size: 21px;
   font-weight: 600;
+
+  a {
+    color: $dark-gray;
+  }
 }
 .email-label {
   font-size: 18px;
