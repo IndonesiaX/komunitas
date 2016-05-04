@@ -2,7 +2,7 @@
 
 	$your_installation_url = 'http://bulk.indonesiax.co.id';
 	$list = 'LSFVwvkDCPpv7EWo8G3pwQ';
-	$success_url = 'http://komunitas.indonesiax.co,id/success.html';
+	$success_url = 'http://komunitas.indonesiax.co.id/success.html';
 	$fail_url = 'http://komunitas.indonesiax.co.id/fail.html';
 
 	//POST variables
