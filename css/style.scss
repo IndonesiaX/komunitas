@@ -1323,12 +1323,13 @@ header.navigation {
   }
 
   section.second {
+    @include clearfix;
+    margin-bottom: 85px;
     .cols {
+      margin-bottom: 30px;
       @include media($tablet) {
         @include span-columns(4);
       }
-
-      margin-bottom: 30px;
 
       h2 {
         font-size: 18px;
