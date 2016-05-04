@@ -471,8 +471,6 @@ header.navigation {
   .hero .hero-logo img {
     height: 4em;
     margin-bottom: 1em; }
-  .hero .ri-grid-loading + .hero-inner {
-    display: none; }
   .hero .hero-inner {
     max-width: 100%;
     margin-left: auto;
@@ -1269,6 +1267,10 @@ header.navigation {
   font-size: 18px;
   font-weight: 600;
   color: #777777; }
+
+.ri-grid-loading + .hero-inner,
+.ri-grid-loading + .header-inner {
+  display: none; }
 
 .ri-grid {
   margin: 0 auto;
