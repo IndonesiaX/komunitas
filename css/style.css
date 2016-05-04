@@ -471,10 +471,13 @@ header.navigation {
   .hero .hero-logo img {
     height: 4em;
     margin-bottom: 1em; }
+  .hero .ri-grid-loading + .hero-inner {
+    display: none; }
   .hero .hero-inner {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    display: block;
     background: rgba(19, 100, 107, 0.6);
     margin: 0;
     position: absolute;
@@ -1233,22 +1236,39 @@ header.navigation {
         font-size: 2.125em; } }
   .page-about section.first p {
     font-size: 1.125em; }
-.page-about section.second .cols {
-  margin-bottom: 30px; }
-  @media screen and (min-width: 768px) {
-    .page-about section.second .cols {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%; }
-      .page-about section.second .cols:last-child {
-        margin-right: 0; } }
-  .page-about section.second .cols h2 {
-    font-size: 18px;
-    font-weight: 600; }
-  .page-about section.second .cols ul {
-    list-style-type: disc;
-    padding-left: 20px; }
+.page-about section.second {
+  margin-bottom: 85px; }
+  .page-about section.second::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .page-about section.second .cols {
+    margin-bottom: 30px; }
+    @media screen and (min-width: 768px) {
+      .page-about section.second .cols {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        .page-about section.second .cols:last-child {
+          margin-right: 0; } }
+    .page-about section.second .cols h2 {
+      font-size: 18px;
+      font-weight: 600; }
+    .page-about section.second .cols ul {
+      list-style-type: disc;
+      padding-left: 20px; }
+
+.email-address {
+  font-size: 21px;
+  font-weight: 600; }
+  .email-address a {
+    color: #333; }
+
+.email-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #777777; }
 
 .ri-grid {
   margin: 0 auto;
@@ -1365,10 +1385,11 @@ header.navigation {
 
 .ri-grid-loading .ri-loading-image {
   position: relative;
-  width: 30px;
-  height: 30px;
-  left: 50%;
-  margin: 100px 0 0 -15px;
+  width: 100%;
+  padding: 50px 0;
   display: block; }
+  .ri-grid-loading .ri-loading-image img {
+    position: relative;
+    left: 50%; }
 
 /*# sourceMappingURL=style.css.map */
