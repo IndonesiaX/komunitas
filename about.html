@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/modernizr.custom.26633.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.gridrotator.js"></script>
+  <script src="js/style.js"></script>
 </head>
 <body class="page-about">
 
@@ -34,7 +37,10 @@
     <!--Hero-->
     <div class="header">
       <div id="header-grid" class="ri-grid ri-grid-size-3">
-        <img class="ri-loading-image" src="img/loading.gif"/>
+        <div class="ri-loading-image">
+          <img src="img/loading.gif"/>
+        </div>
+        
         <ul>
           <li><a href="#"><img src="img/medium/1.jpg"/></a></li>
           <li><a href="#"><img src="img/medium/2.jpg"/></a></li>
@@ -206,43 +212,6 @@
             <p class="copy">Hak cipta ©2016 oleh kontributor individual Komunitas IndonesiaX untuk bagian konten ini.</p>
           </div>
         </footer>
-
-
-
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.gridrotator.js"></script>
-  <script src="js/style.js"></script>
-  <script>
-    //jQuery Grid Rotator
-    $( '#header-grid' ).gridrotator( {
-              rows : 3,
-              columns : 16,
-              maxStep : 2,
-              interval : 2000,
-              w1024 : {
-                rows : 4,
-                columns : 9
-              },
-              w768 : {
-                rows : 5,
-                columns : 7
-              },
-              w480 : {
-                rows : 4,
-                columns : 5
-              },
-              w320 : {
-                rows : 7,
-                columns : 4
-              },
-              w240 : {
-                rows : 7,
-                columns : 3
-              },
-            } );
-  </script>
 
 </body>
 </html>

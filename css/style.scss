@@ -390,6 +390,7 @@ header.navigation {
   .hero-inner {
     @include outer-container($refills-max-width);
     @include clearfix;
+    display: block;
     background: transparentize(mix($brand-deep-blue, $brand-deep-green), 0.4);
     //background: rgba(0, 0, 0, 0.5);
     margin: 0;
@@ -1360,6 +1361,11 @@ header.navigation {
 }
 
 //Grid rotator images
+.ri-grid-loading + .hero-inner,
+.ri-grid-loading + .header-inner {
+    display: none;
+  }
+
 .ri-grid{
   margin: 0 auto;
   position: relative;
@@ -1474,11 +1480,14 @@ header.navigation {
 }
 .ri-grid-loading .ri-loading-image{
   position: relative;
-  width: 30px;
-  height: 30px;
-  left: 50%;
-  margin: 100px 0 0 -15px;
+  width: 100%;
+  padding: 50px 0;
   display: block;
+
+  img {
+    position: relative;
+    left: 50%;
+  }
 }
 
 

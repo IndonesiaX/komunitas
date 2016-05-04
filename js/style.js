@@ -29,7 +29,7 @@ $(document).ready(function() {
     });
   });
 
-  //jQuery Grid Rotator
+  //jQuery Grid Rotator big
   $( '#ri-grid' ).gridrotator( {
             rows : 4,
             columns : 12,
@@ -46,15 +46,27 @@ $(document).ready(function() {
             w480 : {
               rows : 6,
               columns : 5
+            }
+          } );
+
+  //jQuery Grid Rotator small
+  $( '#header-grid' ).gridrotator( {
+            rows : 3,
+            columns : 16,
+            maxStep : 2,
+            interval : 2000,
+            w1024 : {
+              rows : 4,
+              columns : 9
             },
-            w320 : {
-              rows : 7,
-              columns : 4
+            w768 : {
+              rows : 5,
+              columns : 7
             },
-            w240 : {
-              rows : 7,
-              columns : 3
-            },
+            w480 : {
+              rows : 4,
+              columns : 5
+            }
           } );
 
 }); 
