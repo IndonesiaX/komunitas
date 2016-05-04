@@ -1340,9 +1340,18 @@ header.navigation {
         padding-left: 20px;
       }
     }
-  }
-    
-  
+  }  
+}
+
+//Contact
+.email-address {
+  font-size: 21px;
+  font-weight: 600;
+}
+.email-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: lighten(#444, 20%);
 }
 
 //Grid rotator images
